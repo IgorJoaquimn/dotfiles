@@ -59,11 +59,14 @@
 #cpu,
 #mpris,
 #window,
-#load,
+#load {
+    margin: 0 3px;
+} 
+
 #custom-gpu-usage,
 #custom-gpu-vram,
 #custom-gpu-temp {
-    margin: 0 3px;
+    margin: 0 10px;
 } 
 
 #right, 
