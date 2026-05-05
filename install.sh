@@ -83,6 +83,13 @@ for app in "${apps[@]}"; do
     fi
 done
 
+# Install Yazi packages
+if command -v ya &> /dev/null; then
+    echo -e "${BLUE}Installing Yazi packages...${NC}"
+    (cd "$DOTFILES_DIR/yazi" && ya pkg install)
+    echo -e "${GREEN}Yazi packages installed${NC}"
+fi
+
 # Source the bash editor config in .bashrc if not already present
 BASHRC="$HOME/.bashrc"
 if [ -f "$BASHRC" ]; then
