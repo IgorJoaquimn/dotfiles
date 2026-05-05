@@ -28,20 +28,6 @@
         <child type="submenu">
             <object class="GtkMenu">
                 <child>
-                    <object class="GtkMenuItem" id="action-4-1">
-                        <property name="label">Inhibit Shutdown</property>
-                    </object>
-                </child>
-
-                <child>
-                    <object class="GtkMenuItem" id="action-4-2">
-                        <property name="label">Inhibit Lid</property>
-                    </object>
-                </child>
-                
-                <child><object class="GtkSeparatorMenuItem"/></child>
-
-                <child>
                     <object class="GtkMenuItem" id="action-4-3">
                         <property name="label">Restart</property>
                     </object>

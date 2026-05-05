@@ -198,8 +198,6 @@
             "action-1-1": "hyprctl dispatch exec '[float] kitty -e htop'",
             "action-1-2": "hyprctl dispatch exec 'kitty -e btop'",
 
-            "action-4-1": "~/.local/bin/caffeine shutdown",
-            "action-4-2": "~/.local/bin/caffeine handle-lid-switch",
             "action-4-3": "systemctl reboot",
             "action-4-4": "hyprctl dispatch exit",
             "action-4-5": "systemctl poweroff",
