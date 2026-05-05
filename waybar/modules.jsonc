@@ -191,7 +191,7 @@
     "custom/ctlcenter" : {
         "tooltip" : false,
         "format" : "",
-        "on-click" : "swaync-client -t",
+        "on-click" : "dunstctl history-pop",
         "menu": "on-click-right",
         "menu-file": "~/.config/waybar/context/ctlcenter.xml",
         "menu-actions": {
