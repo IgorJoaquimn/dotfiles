@@ -53,7 +53,7 @@ DOTFILES_DIR="$HOME/dotfiles"
 CONFIG_DIR="$HOME/.config"
 
 # List of apps/folders to link
-apps=("hypr" "kitty" "waybar" "rofi" "btop" "nvim" "dunst" "yazi" "mpv" "qimgv")
+apps=("hypr" "kitty" "waybar" "rofi" "btop" "nvim" "dunst" "yazi" "mpv" "qimgv" "bash")
 
 # Create .config if it doesn't exist
 mkdir -p "$CONFIG_DIR"
@@ -82,5 +82,18 @@ for app in "${apps[@]}"; do
         echo "Warning: $app directory not found in $DOTFILES_DIR"
     fi
 done
+
+# Source the bash editor config in .bashrc if not already present
+BASHRC="$HOME/.bashrc"
+if [ -f "$BASHRC" ]; then
+    SOURCE_LINE="[ -f \$HOME/.config/bash/.bashrc_editor ] && source \$HOME/.config/bash/.bashrc_editor"
+    if ! grep -q "bash/.bashrc_editor" "$BASHRC"; then
+        echo -e "${BLUE}Adding source line to .bashrc...${NC}"
+        echo "" >> "$BASHRC"
+        echo "# Source dotfiles editor configuration" >> "$BASHRC"
+        echo "$SOURCE_LINE" >> "$BASHRC"
+        echo -e "${GREEN}Added to .bashrc${NC}"
+    fi
+fi
 
 echo -e "${GREEN}Installation complete!${NC}"
