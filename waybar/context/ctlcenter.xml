@@ -63,33 +63,6 @@
       </object>
     </child>
 
-    <child>
-        <object class="GtkMenuItem" id="action-5">
-            <property name="label">Powersafe mode</property>
-        </object>
-    </child>
-
-    <child>
-      <object class="GtkMenuItem" id="action-7">
-        <property name="label">Notifications</property>
-        <child type="submenu">
-            <object class="GtkMenu">
-                <child>
-                    <object class="GtkMenuItem" id="action-7-1">
-                        <property name="label">Clear all</property>
-                    </object>
-                </child>
-
-                <child>
-                    <object class="GtkMenuItem" id="action-7-2">
-                        <property name="label">Toggle DND</property>
-                    </object>
-                </child>
-            </object>
-        </child>
-      </object>
-    </child>
-
     <child><object class="GtkSeparatorMenuItem" id="separator"/></child>
 
     <child>
