@@ -11,7 +11,7 @@ Organized dotfiles for Arch Linux (Hyprland).
 - **Neovim**: Text editor
 - **Thunar**: Graphical file manager
 - **Yazi**: Terminal file manager
-- **Dunst**: Notification daemon
+- **SwayNC**: Notification daemon and control center
 - **qimgv**: Image viewer
 - **MPV**: Video player
 - **Hyprshot**: Screenshot utility
@@ -34,7 +34,7 @@ Ensure you have the following packages installed:
 - `neovim`
 - `thunar`
 - `yazi`
-- `dunst`
+- `swaync`
 - `qimgv`
 - `mpv`
 - `hyprshot`
