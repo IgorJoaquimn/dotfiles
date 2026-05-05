@@ -130,6 +130,11 @@ if command -v hyprpm &> /dev/null; then
     echo -e "${GREEN}Hyprland plugins configured${NC}"
 fi
 
+# Ensure local configuration files exist to prevent errors
+echo -e "${BLUE}Ensuring local configuration files exist...${NC}"
+touch "$HOME/.config/hypr/local.conf"
+touch "$HOME/.bashrc_local"
+
 # Source the bash editor config in .bashrc if not already present
 BASHRC="$HOME/.bashrc"
 if [ -f "$BASHRC" ]; then
