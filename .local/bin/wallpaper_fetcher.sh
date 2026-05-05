@@ -7,6 +7,4 @@ IMG_URL=$(curl -s "$API_URL" | jq -r '.data[0].path')
 wget "$IMG_URL" -O "$TARGET"
 
 # Update hyprpaper configuration
-hyprctl hyprpaper unload all
-hyprctl hyprpaper preload "$TARGET"
 hyprctl hyprpaper wallpaper ",$TARGET"
