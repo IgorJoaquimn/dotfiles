@@ -3,9 +3,43 @@
 # Define colors for output
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
+RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 echo -e "${BLUE}Starting dotfiles installation...${NC}"
+
+# Define dependencies
+dependencies=(
+    "hyprland"
+    "kitty"
+    "waybar"
+    "rofi-wayland"
+    "btop"
+    "neovim"
+    "ttf-firacode-nerd"
+)
+
+# Function to check and install dependencies
+install_dependencies() {
+    echo -e "${BLUE}Checking for dependencies...${NC}"
+    
+    if ! command -v yay &> /dev/null; then
+        echo -e "${RED}Error: 'yay' is not installed. Please install an AUR helper first.${NC}"
+        return 1
+    fi
+
+    for pkg in "${dependencies[@]}"; do
+        if pacman -Qi "$pkg" &> /dev/null; then
+            echo -e "${GREEN}[OK] $pkg is already installed.${NC}"
+        else
+            echo -e "${BLUE}Installing $pkg...${NC}"
+            yay -S --noconfirm "$pkg"
+        fi
+    done
+}
+
+# Run dependency installation
+install_dependencies
 
 # Define the dotfiles directory
 DOTFILES_DIR="$HOME/dotfiles"
@@ -16,6 +50,8 @@ apps=("hypr" "kitty" "waybar" "rofi" "btop" "nvim")
 
 # Create .config if it doesn't exist
 mkdir -p "$CONFIG_DIR"
+
+echo -e "${BLUE}Linking configuration files...${NC}"
 
 for app in "${apps[@]}"; do
     if [ -d "$DOTFILES_DIR/$app" ]; then
@@ -41,5 +77,3 @@ for app in "${apps[@]}"; do
 done
 
 echo -e "${GREEN}Installation complete!${NC}"
-echo "Note: Make sure you have the following packages installed:"
-echo "hyprland, kitty, waybar, rofi-wayland, btop, neovim"
