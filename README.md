@@ -41,6 +41,23 @@ chmod +x install.sh
 ./install.sh
 ```
 
+## Machine-Specific Configuration (Local Sourcing)
+To handle differences between PCs (like inverted scroll or different monitors), this repo uses a "Local Sourcing" pattern.
+
+### Hyprland
+Create a file at `~/.config/hypr/local.conf`. This file is ignored by Git, so you can put hardware-specific settings there.
+Example for Laptop:
+```hypr
+input {
+    touchpad {
+        natural_scroll = true
+    }
+}
+```
+
+### Bash
+If you need local aliases or environment variables, create `~/.bashrc_local` and it will be ignored by Git.
+
 ## Keybindings
 The modifier key is set to `SUPER` (Windows key).
 
