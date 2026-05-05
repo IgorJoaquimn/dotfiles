@@ -113,6 +113,7 @@
         "interval": 10,
         "format-disabled": "",
         "format-disconnected": "",
+        "format-linked": "",
         "format-wifi": "",
         "format-ethernet": "",
         "tooltip-format": "{essid}\n\nFrequency: {frequency}GHz\nStrength: {signalStrength}%\n\n{bandwidthUpBytes}   {bandwidthDownBytes}",
