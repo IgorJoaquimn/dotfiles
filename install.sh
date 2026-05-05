@@ -18,6 +18,12 @@ dependencies=(
     "neovim"
     "ttf-firacode-nerd"
     "ttf-fira-mono"
+    "thunar"
+    "yazi"
+    "dunst"
+    "qimgv"
+    "mpv"
+    "hyprshot"
 )
 
 # Function to check and install dependencies
@@ -47,7 +53,7 @@ DOTFILES_DIR="$HOME/dotfiles"
 CONFIG_DIR="$HOME/.config"
 
 # List of apps/folders to link
-apps=("hypr" "kitty" "waybar" "rofi" "btop" "nvim")
+apps=("hypr" "kitty" "waybar" "rofi" "btop" "nvim" "dunst" "yazi" "mpv" "qimgv")
 
 # Create .config if it doesn't exist
 mkdir -p "$CONFIG_DIR"
