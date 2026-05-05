@@ -260,5 +260,26 @@
         "modules" : [
             "backlight", "backlight/slider"
         ]
+    },
+
+    "custom/gpu-usage": {
+        "interval": 10,
+        "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+        "format": "󰾲 {}%",
+        "tooltip": false
+    },
+
+    "custom/gpu-vram": {
+        "interval": 10,
+        "exec": "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F', ' '{printf \"%.1fG/%.1fG\", $1/1024, $2/1024}'",
+        "format": " {}",
+        "tooltip": false
+    },
+
+    "custom/gpu-temp": {
+        "interval": 10,
+        "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
+        "format": " {}°",
+        "tooltip": false
     }
 }

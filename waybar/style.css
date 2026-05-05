@@ -25,7 +25,10 @@
 #mpris,
 #window,
 #cpu, 
-#load {
+#load,
+#custom-gpu-usage,
+#custom-gpu-vram,
+#custom-gpu-temp {
     padding: 1px 7px;
 }
 
@@ -56,7 +59,10 @@
 #cpu,
 #mpris,
 #window,
-#load {
+#load,
+#custom-gpu-usage,
+#custom-gpu-vram,
+#custom-gpu-temp {
     margin: 0 3px;
 } 
 

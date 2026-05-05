@@ -45,7 +45,7 @@
             "click-to-reveal": true
         },
         "modules" : [
-            "custom/arrow-left", "memory", "temperature"
+            "custom/arrow-left", "memory", "custom/gpu-vram", "custom/gpu-usage", "temperature", "custom/gpu-temp"
         ]
     },
 
