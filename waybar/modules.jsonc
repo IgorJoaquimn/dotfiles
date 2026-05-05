@@ -61,7 +61,7 @@
 
     "temperature": {
         "interval": 10,
-        "format": "{icon} {temperatureC}°",
+        "format": "CPU {icon} {temperatureC}°",
         "critical-threshold": 90,
         "format-icons": ["","","","",""]	
     },
@@ -279,7 +279,7 @@
     "custom/gpu-temp": {
         "interval": 10,
         "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
-        "format": " {}°",
+        "format": "GPU  {}°",
         "tooltip": false
     }
 }
