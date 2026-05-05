@@ -29,19 +29,19 @@
             <object class="GtkMenu">
                 <child>
                     <object class="GtkMenuItem" id="action-4-3">
-                        <property name="label">Restart</property>
+                        <property name="label">󰜉 Restart</property>
                     </object>
                 </child>
 
                 <child>
                     <object class="GtkMenuItem" id="action-4-4">
-                        <property name="label">Logout</property>
+                        <property name="label">󰍃 Logout</property>
                     </object>
                 </child>
 
                 <child>
                     <object class="GtkMenuItem" id="action-4-5">
-                        <property name="label">Shutdown</property>
+                        <property name="label">󰐥 Shutdown</property>
                     </object>
                 </child>
             </object>
