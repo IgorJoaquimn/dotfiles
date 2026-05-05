@@ -202,7 +202,9 @@
             "action-4-2": "~/.local/bin/caffeine handle-lid-switch",
 
             "action-5": "~/.local/bin/powersafe",
-            "action-6": "hyprctl reload"
+            "action-6": "hyprctl reload",
+            "action-7-1": "swaync-client -C",
+            "action-7-2": "swaync-client -d"
   		}
     },
 
