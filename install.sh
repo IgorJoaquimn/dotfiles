@@ -24,6 +24,13 @@ dependencies=(
     "qimgv"
     "mpv"
     "hyprshot"
+    "jq"
+    "wget"
+    "cmake"
+    "cpio"
+    "pkgconf"
+    "meson"
+    "ninja"
 )
 
 # Function to check and install dependencies
@@ -32,6 +39,7 @@ install_dependencies() {
     
     if ! command -v yay &> /dev/null; then
         echo -e "${RED}Error: 'yay' is not installed. Please install an AUR helper first.${NC}"
+        echo -e "${BLUE}Quick tip: sudo pacman -S --needed base-devel git && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si${NC}"
         return 1
     fi
 
@@ -46,7 +54,7 @@ install_dependencies() {
 }
 
 # Run dependency installation
-install_dependencies
+install_dependencies || exit 1
 
 # Define the dotfiles directory
 DOTFILES_DIR="$HOME/dotfiles"
@@ -83,11 +91,43 @@ for app in "${apps[@]}"; do
     fi
 done
 
+# Setup local bin directory and scripts
+echo -e "${BLUE}Setting up local scripts...${NC}"
+mkdir -p "$HOME/.local/bin"
+if [ -d "$DOTFILES_DIR/.local/bin" ]; then
+    for script in "$DOTFILES_DIR/.local/bin"/*; do
+        script_name=$(basename "$script")
+        ln -sf "$script" "$HOME/.local/bin/$script_name"
+        chmod +x "$HOME/.local/bin/$script_name"
+    done
+    echo -e "${GREEN}Local scripts linked and executable${NC}"
+fi
+
+# Setup systemd services for wallpaper
+echo -e "${BLUE}Setting up wallpaper service...${NC}"
+mkdir -p "$HOME/.config/systemd/user"
+if [ -d "$DOTFILES_DIR/systemd/user" ]; then
+    cp "$DOTFILES_DIR/systemd/user"/wallpaper.* "$HOME/.config/systemd/user/"
+    systemctl --user daemon-reload
+    systemctl --user enable --now wallpaper.timer
+    echo -e "${GREEN}Wallpaper service enabled${NC}"
+fi
+
 # Install Yazi packages
 if command -v ya &> /dev/null; then
     echo -e "${BLUE}Installing Yazi packages...${NC}"
     (cd "$DOTFILES_DIR/yazi" && ya pkg install)
     echo -e "${GREEN}Yazi packages installed${NC}"
+fi
+
+# Hyprland Plugin setup
+echo -e "${BLUE}Setting up Hyprland plugins...${NC}"
+if command -v hyprpm &> /dev/null; then
+    hyprpm update
+    hyprpm add https://github.com/zjeffer/split-monitor-workspaces
+    hyprpm enable split-monitor-workspaces
+    hyprpm reload
+    echo -e "${GREEN}Hyprland plugins configured${NC}"
 fi
 
 # Source the bash editor config in .bashrc if not already present
@@ -103,4 +143,4 @@ if [ -f "$BASHRC" ]; then
     fi
 fi
 
-echo -e "${GREEN}Installation complete!${NC}"
+echo -e "${GREEN}Installation complete! Please restart Hyprland to apply all changes.${NC}"
