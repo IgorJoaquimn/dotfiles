@@ -1,0 +1,5 @@
+[Unit]
+Description=Fetch new wallpaper from Wallhaven
+
+[Service]
+ExecStart=%h/dotfiles/.local/bin/wallpaper_fetcher.sh
