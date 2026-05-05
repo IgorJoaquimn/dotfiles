@@ -27,3 +27,20 @@ Ensure you have the following packages installed:
 - `btop`
 - `neovim`
 - `ttf-firacode-nerd` (for icons)
+
+## Keybindings
+The modifier key is set to `SUPER` (Windows key).
+
+| Keybinding | Action |
+| --- | --- |
+| `SUPER + Q` | Open Terminal (Kitty) |
+| `SUPER + R` | Open App Launcher (Rofi) |
+| `SUPER + C` | Close Window |
+| `SUPER + E` | File Manager (Dolphin) |
+| `SUPER + V` | Toggle Floating |
+| `SUPER + M` | Exit Hyprland |
+| `SUPER + Arrow Keys` | Move Focus |
+| `SUPER + [0-9]` | Switch Workspaces |
+| `SUPER + SHIFT + [0-9]` | Move Window to Workspace |
+| `SUPER + Scroll` | Cycle Workspaces |
+| `SUPER + LMB/RMB` | Move/Resize Window |
