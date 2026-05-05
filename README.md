@@ -39,6 +39,7 @@ The modifier key is set to `SUPER` (Windows key).
 | `SUPER + E` | File Manager (Dolphin) |
 | `SUPER + V` | Toggle Floating |
 | `SUPER + M` | Exit Hyprland |
+| `SUPER + F` | Fullscreen Tile |
 | `SUPER + Arrow Keys` | Move Focus |
 | `SUPER + [0-9]` | Switch Workspaces |
 | `SUPER + SHIFT + [0-9]` | Move Window to Workspace |

@@ -17,6 +17,7 @@ dependencies=(
     "btop"
     "neovim"
     "ttf-firacode-nerd"
+    "ttf-fira-mono"
 )
 
 # Function to check and install dependencies

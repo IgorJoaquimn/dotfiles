@@ -29,7 +29,7 @@
 
     background-color: transparent;
     text-color: @fg;
-    font: "FiraCode Nerd Font 12";
+    font: "Fira Mono 12";
 }
 
 window {
