@@ -1,8 +1,9 @@
 {
     "hyprland/workspaces": {
         "format": "{icon}",
-        "on-scroll-down": "hyprctl dispatch workspace e+1",
-        "on-scroll-up": "hyprctl dispatch workspace e-1",
+        "all-outputs": false,
+        "on-scroll-up": "hyprctl dispatch split-cycleworkspaces -1",
+        "on-scroll-down": "hyprctl dispatch split-cycleworkspaces +1",
         "persistent-workspaces": { "*": 5 },
         "cursor" : true,
         "format-icons": {
@@ -202,7 +203,7 @@
             "action-4-4": "hyprctl dispatch exit",
             "action-4-5": "systemctl poweroff",
 
-            "action-6": "hyprctl reload; pkill -SIGUSR2 waybar"
+            "action-6": "hyprctl reload"
   		}
     },
 
