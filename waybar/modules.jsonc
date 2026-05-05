@@ -196,13 +196,16 @@
         "menu-file": "~/.config/waybar/context/ctlcenter.xml",
         "menu-actions": {
             "action-1-1": "hyprctl dispatch exec '[float] kitty -e htop'",
-            "action-1-2": "hyprctl dispatch exec '[float] kitty -e btop'",
+            "action-1-2": "hyprctl dispatch exec 'kitty -e btop'",
 
             "action-4-1": "~/.local/bin/caffeine shutdown",
             "action-4-2": "~/.local/bin/caffeine handle-lid-switch",
+            "action-4-3": "systemctl reboot",
+            "action-4-4": "hyprctl dispatch exit",
+            "action-4-5": "systemctl poweroff",
 
             "action-5": "~/.local/bin/powersafe",
-            "action-6": "hyprctl reload",
+            "action-6": "hyprctl reload; pkill -SIGUSR2 waybar",
             "action-7-1": "swaync-client -C",
             "action-7-2": "swaync-client -d"
   		}

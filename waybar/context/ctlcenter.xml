@@ -24,18 +24,38 @@
 
     <child>
       <object class="GtkMenuItem" id="action-4">
-        <property name="label">Inhibit</property>
+        <property name="label">System</property>
         <child type="submenu">
             <object class="GtkMenu">
                 <child>
                     <object class="GtkMenuItem" id="action-4-1">
-                        <property name="label">Shutdown</property>
+                        <property name="label">Inhibit Shutdown</property>
                     </object>
                 </child>
 
                 <child>
                     <object class="GtkMenuItem" id="action-4-2">
-                        <property name="label">Lid</property>
+                        <property name="label">Inhibit Lid</property>
+                    </object>
+                </child>
+                
+                <child><object class="GtkSeparatorMenuItem"/></child>
+
+                <child>
+                    <object class="GtkMenuItem" id="action-4-3">
+                        <property name="label">Restart</property>
+                    </object>
+                </child>
+
+                <child>
+                    <object class="GtkMenuItem" id="action-4-4">
+                        <property name="label">Logout</property>
+                    </object>
+                </child>
+
+                <child>
+                    <object class="GtkMenuItem" id="action-4-5">
+                        <property name="label">Shutdown</property>
                     </object>
                 </child>
             </object>
