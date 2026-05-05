@@ -1,0 +1,92 @@
+/**
+ * Gruvbox Dark theme for Rofi
+ * Based on the Gruvbox color palette.
+ */
+
+* {
+    gruv0: #282828;
+    gruv1: #3c3836;
+    gruv2: #504945;
+    gruv3: #665c54;
+    gruv4: #7c6f64;
+    gruv5: #a89984;
+    gruv6: #bdae93;
+    gruv7: #d5c4a1;
+    gruv8: #ebdbb2;
+    gruv9: #fbf1c7;
+
+    gruv-red: #cc241d;
+    gruv-orange: #d65d0e;
+    gruv-yellow: #d79921;
+    gruv-green: #98971a;
+    gruv-aqua: #689d6a;
+    gruv-blue: #458588;
+    gruv-purple: #b16286;
+
+    bg: @gruv0;
+    fg: @gruv8;
+    accent: @gruv-orange;
+
+    background-color: transparent;
+    text-color: @fg;
+    font: "FiraCode Nerd Font 12";
+}
+
+window {
+    background-color: @bg;
+    border: 2px;
+    border-color: @accent;
+    border-radius: 10px;
+    width: 600px;
+    padding: 20px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 15px;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @gruv1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+prompt {
+    background-color: @accent;
+    text-color: @bg;
+    padding: 0 10px;
+    border-radius: 3px;
+}
+
+entry {
+    placeholder: "Search...";
+    placeholder-color: @gruv4;
+    padding: 0 10px;
+}
+
+listview {
+    lines: 10;
+    columns: 1;
+    fixed-height: false;
+}
+
+element {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0 10px 0 0;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
