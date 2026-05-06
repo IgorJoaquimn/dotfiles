@@ -132,6 +132,28 @@ if command -v hyprpm &> /dev/null; then
     echo -e "${GREEN}Hyprland plugins configured${NC}"
 fi
 
+# SDDM Theme setup
+echo -e "${BLUE}Setting up SDDM theme...${NC}"
+if [ -d "/usr/share/sddm/themes" ]; then
+    if [ ! -d "/usr/share/sddm/themes/pixel-coffee" ]; then
+        echo -e "${BLUE}Installing pixel-coffee theme...${NC}"
+        git clone https://github.com/Darkkal44/qylock.git /tmp/qylock
+        sudo cp -r /tmp/qylock/themes/pixel-coffee /usr/share/sddm/themes/
+    fi
+    
+    # Configure theme for images
+    sudo sed -i 's/type=video/type=image/' /usr/share/sddm/themes/pixel-coffee/theme.conf
+    sudo sed -i 's/background=bg.mp4/background=background.jpg/' /usr/share/sddm/themes/pixel-coffee/theme.conf
+    
+    # Allow user to update background without sudo
+    sudo chown -R $USER:$USER /usr/share/sddm/themes/pixel-coffee/
+    
+    # Enable theme in SDDM
+    sudo mkdir -p /etc/sddm.conf.d
+    echo -e "[Theme]\nCurrent=pixel-coffee" | sudo tee /etc/sddm.conf.d/theme.conf > /dev/null
+    echo -e "${GREEN}SDDM theme configured${NC}"
+fi
+
 # Ensure local configuration files exist to prevent errors
 echo -e "${BLUE}Ensuring local configuration files exist...${NC}"
 touch "$HOME/.config/hypr/local.conf"

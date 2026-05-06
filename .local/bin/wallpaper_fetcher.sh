@@ -10,6 +10,9 @@ IMG_URL=$(curl -s "$API_URL" | jq -r '.data[0].path')
 if [ -n "$IMG_URL" ] && [ "$IMG_URL" != "null" ]; then
     wget -q "$IMG_URL" -O "$TARGET"
     
+    # Update SDDM background
+    cp "$TARGET" "/usr/share/sddm/themes/pixel-coffee/background.jpg"
+    
     # Update wallpaper using swaybg
     killall swaybg 2>/dev/null
     swaybg -m fill -i "$TARGET" &
