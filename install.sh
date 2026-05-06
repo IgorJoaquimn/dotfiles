@@ -22,7 +22,7 @@ dependencies=(
     "ttf-fira-mono"
     "thunar"
     "yazi"
-    "swaync"
+    "dunst"
     "qimgv"
     "mpv"
     "hyprshot"
@@ -63,7 +63,7 @@ DOTFILES_DIR="$HOME/dotfiles"
 CONFIG_DIR="$HOME/.config"
 
 # List of apps/folders to link
-apps=("hypr" "kitty" "waybar" "rofi" "btop" "nvim" "swaync" "yazi" "mpv" "qimgv" "bash")
+apps=("hypr" "kitty" "waybar" "rofi" "btop" "nvim" "dunst" "yazi" "mpv" "qimgv" "bash")
 
 # Create .config if it doesn't exist
 mkdir -p "$CONFIG_DIR"

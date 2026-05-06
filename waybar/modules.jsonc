@@ -192,24 +192,6 @@
         "on-click": "rofi -show drun &"
     },
 
-    "custom/ctlcenter" : {
-        "tooltip" : false,
-        "format" : "",
-        "on-click" : "swaync-client -t",
-        "menu": "on-click-right",
-        "menu-file": "~/.config/waybar/context/ctlcenter.xml",
-        "menu-actions": {
-            "action-1-1": "hyprctl dispatch exec '[float] kitty -e htop'",
-            "action-1-2": "hyprctl dispatch exec 'kitty -e btop'",
-
-            "action-4-3": "systemctl reboot",
-            "action-4-4": "hyprctl dispatch exit",
-            "action-4-5": "systemctl poweroff",
-
-            "action-6": "hyprctl reload"
-  		}
-    },
-
     "custom/arrow-left":  { 
         "format": "", 
         "tooltip": false, 
