@@ -1,7 +1,6 @@
-import QtQuick
-import QtQuick.Window
-import Qt5Compat.GraphicalEffects
-import Qt.labs.folderlistmodel
+import QtQuick 2.15
+import QtQuick.Window 2.15
+import Qt.labs.folderlistmodel 2.15
 import SddmComponents 2.0
 
 Rectangle {
