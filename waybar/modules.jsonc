@@ -21,7 +21,7 @@
         "interval": 30,
         "format":" {usage}%",
         "cursor": true,
-        "on-click": "kitty -e btop",
+        "on-click": "hyprctl dispatch exec '[float] kitty -e btop'",
         "states": {
             "warning": 80,
             "critical": 90
@@ -38,13 +38,13 @@
         "interval": 30,
         "format": " {load1}%",
         "cursor": true,
-        "on-click": "kitty -e btop"
+        "on-click": "hyprctl dispatch exec '[float] kitty -e btop'"
     },
 
     "memory": {
         "interval": 10,
         "format": "  {used:0.1f}G/{total:0.1f}G",
-        "on-click": "kitty -e btop",
+        "on-click": "hyprctl dispatch exec '[float] kitty -e btop'",
         "states": {
             "warning": 80,
             "critical": 90
