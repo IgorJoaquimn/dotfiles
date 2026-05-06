@@ -63,14 +63,17 @@ The modifier key is set to `SUPER` (Windows key).
 
 | Keybinding | Action |
 | --- | --- |
-| `SUPER + Q` | Open Terminal (Kitty) |
+| `SUPER + T` | Open Terminal (Kitty) |
 | `SUPER + R` | Open App Launcher (Rofi) |
-| `SUPER + C` | Close Window |
+| `SUPER + Q` | Close Window |
+| `SUPER + W` | Maximize Window |
+| `SUPER + K / L` | Resize Window (Horizontal) |
 | `SUPER + E` | File Manager (Thunar) |
 | `SUPER + Y` | Terminal File Manager (Yazi) |
 | `SUPER + V` | Toggle Floating |
 | `SUPER + M` | Exit Hyprland |
 | `SUPER + F` | Fullscreen Tile |
+| `SUPER + N` | Next Wallpaper |
 | `Print` | Screenshot (Fullscreen) |
 | `SUPER + Print` | Screenshot (Window) |
 | `SUPER + SHIFT + Print` | Screenshot (Region) |
