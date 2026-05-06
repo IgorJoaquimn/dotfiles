@@ -67,7 +67,8 @@ The modifier key is set to `SUPER` (Windows key).
 | `SUPER + R` | Open App Launcher (Rofi) |
 | `SUPER + Q` | Close Window |
 | `SUPER + W` | Maximize Window |
-| `SUPER + K / L` | Resize Window (Horizontal) |
+| `SUPER + K / L` | Move Focus (Left / Right) |
+| `SUPER + SHIFT + K / L` | Resize Window (Horizontal) |
 | `SUPER + E` | File Manager (Thunar) |
 | `SUPER + Y` | Terminal File Manager (Yazi) |
 | `SUPER + V` | Toggle Floating |
