@@ -21,6 +21,7 @@
         "interval": 30,
         "format":" {usage}%",
         "cursor": true,
+        "on-click": "kitty -e btop",
         "states": {
             "warning": 80,
             "critical": 90
@@ -36,12 +37,14 @@
     "load": {
         "interval": 30,
         "format": " {load1}%",
-        "cursor": true
+        "cursor": true,
+        "on-click": "kitty -e btop"
     },
 
     "memory": {
         "interval": 10,
         "format": "  {used:0.1f}G/{total:0.1f}G",
+        "on-click": "kitty -e btop",
         "states": {
             "warning": 80,
             "critical": 90
