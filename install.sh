@@ -11,6 +11,8 @@ echo -e "${BLUE}Starting dotfiles installation...${NC}"
 # Define dependencies
 dependencies=(
     "hyprland"
+    "swaybg"
+    "hypridle"
     "kitty"
     "waybar"
     "rofi-wayland"

@@ -4,7 +4,7 @@ WALLPAPER_DIR="$HOME/wallpapers/photo"
 STATE_FILE="$HOME/.cache/current_wallpaper_index"
 
 # Get list of images
-images=($(find "$WALLPAPER_DIR" -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" \) | sort))
+IFS=$'\n' read -d '' -r -a images < <(find "$WALLPAPER_DIR" -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" \) | sort && printf '\0')
 num_images=${#images[@]}
 
 if [ "$num_images" -eq 0 ]; then
@@ -16,7 +16,7 @@ fi
 if [ -f "$STATE_FILE" ]; then
     index=$(cat "$STATE_FILE")
 else
-    index=0
+    index=-1
 fi
 
 # Increment index
@@ -25,12 +25,9 @@ echo "$next_index" > "$STATE_FILE"
 
 NEXT_WALLPAPER="${images[$next_index]}"
 
-# Update hyprpaper
-hyprctl hyprpaper preload "$NEXT_WALLPAPER"
-hyprctl hyprpaper wallpaper ",$NEXT_WALLPAPER"
+# Use swaybg to set the wallpaper
+# Kill existing swaybg processes
+killall swaybg 2>/dev/null
 
-# Unload previous wallpaper to save memory (optional but recommended)
-if [ -n "${images[$index]}" ] && [ "${images[$index]}" != "$NEXT_WALLPAPER" ]; then
-    # Wait a bit to ensure the transition is smooth if any, then unload
-    (sleep 1 && hyprctl hyprpaper unload "${images[$index]}") &
-fi
+# Start swaybg in the background
+swaybg -m fill -i "$NEXT_WALLPAPER" &
