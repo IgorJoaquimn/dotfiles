@@ -67,8 +67,9 @@ The modifier key is set to `SUPER` (Windows key).
 | `SUPER + R` | Open App Launcher (Rofi) |
 | `SUPER + Q` | Close Window |
 | `SUPER + W` | Maximize Window |
-| `SUPER + K / L` | Move / Swap Window (Left / Right) |
-| `SUPER + SHIFT + K / L` | Resize Window (Horizontal) |
+| `SUPER + H / J / K / L` | Move / Swap Window (Left / Down / Up / Right) |
+| `SUPER + SHIFT + H / J / K / L` | Resize Window (Left / Down / Up / Right) |
+| `SUPER + Arrow Keys` | Move Focus |
 | `SUPER + E` | File Manager (Thunar) |
 | `SUPER + Y` | Terminal File Manager (Yazi) |
 | `SUPER + V` | Toggle Floating |
@@ -78,7 +79,6 @@ The modifier key is set to `SUPER` (Windows key).
 | `Print` | Screenshot (Fullscreen) |
 | `SUPER + Print` | Screenshot (Window) |
 | `SUPER + SHIFT + Print` | Screenshot (Region) |
-| `SUPER + Arrow Keys` | Move Focus |
 | `SUPER + [0-9]` | Switch Workspaces (Independent per monitor) |
 | `SUPER + SHIFT + [0-9]` | Move Window to Workspace |
 | `SUPER + Scroll` | Cycle Workspaces |
