@@ -4,8 +4,20 @@ TARGET="$HOME/Pictures/wallpaper.jpg"
 mkdir -p "$HOME/Pictures"
 API_URL="https://wallhaven.cc/api/v1/search?sorting=random&purity=100&categories=111&q=id:23416"
 
-# Fetch the JSON response and use jq to extract the path
-IMG_URL=$(curl -s "$API_URL" | jq -r '.data[0].path')
+# Fetch the JSON response
+RESPONSE=$(curl -s "$API_URL")
+
+# Get number of images returned (max 24 per page usually)
+COUNT=$(echo "$RESPONSE" | jq '.data | length')
+
+if [ -n "$COUNT" ] && [ "$COUNT" -gt 0 ]; then
+    # Pick a random index
+    RANDOM_INDEX=$(( RANDOM % COUNT ))
+    IMG_URL=$(echo "$RESPONSE" | jq -r ".data[$RANDOM_INDEX].path")
+else
+    echo "No images found in API response"
+    exit 1
+fi
 
 if [ -n "$IMG_URL" ] && [ "$IMG_URL" != "null" ]; then
     wget -q "$IMG_URL" -O "$TARGET"

@@ -125,11 +125,17 @@ fi
 # Hyprland Plugin setup
 echo -e "${BLUE}Setting up Hyprland plugins...${NC}"
 if command -v hyprpm &> /dev/null; then
-    hyprpm update
-    hyprpm add https://github.com/zjeffer/split-monitor-workspaces
-    hyprpm enable split-monitor-workspaces
-    hyprpm reload
-    echo -e "${GREEN}Hyprland plugins configured${NC}"
+    if ! hyprpm list | grep -q "split-monitor-workspaces"; then
+        echo -e "${BLUE}Adding split-monitor-workspaces plugin...${NC}"
+        hyprpm update
+        hyprpm add https://github.com/zjeffer/split-monitor-workspaces
+        hyprpm enable split-monitor-workspaces
+        hyprpm reload
+        echo -e "${GREEN}Hyprland plugins configured${NC}"
+    else
+        echo -e "${GREEN}[OK] split-monitor-workspaces plugin is already installed.${NC}"
+        hyprpm reload # Just reload to ensure it's active
+    fi
 fi
 
 # SDDM Theme setup
