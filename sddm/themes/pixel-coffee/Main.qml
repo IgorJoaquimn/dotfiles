@@ -27,7 +27,7 @@ Rectangle {
 
     Image {
         anchors.fill: parent
-        source: "background.jpg?t=" + Date.now()
+        source: "background.jpg"
         fillMode: Image.PreserveAspectCrop
         asynchronous: true
         cache: false
