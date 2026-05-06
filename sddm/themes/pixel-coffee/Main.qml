@@ -26,7 +26,13 @@ Rectangle {
     Component.onCompleted: fadeAnim.start()
     NumberAnimation { id: fadeAnim; target: root; property: "ui"; from: 0; to: 1; duration: 800; easing.type: Easing.OutCubic }
 
-    Loader { anchors.fill: parent; source: "BackgroundVideo.qml" }
+    Image {
+        anchors.fill: parent
+        source: "background.jpg"
+        fillMode: Image.PreserveAspectCrop
+        asynchronous: true
+        cache: false
+    }
 
     // Top Overlay
     Rectangle { anchors.top: parent.top; anchors.left: parent.left; anchors.right: parent.right; height: 160 * s; gradient: Gradient { GradientStop { position: 0.0; color: "#d8000000" } GradientStop { position: 1.0; color: "transparent" } } }
