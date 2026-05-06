@@ -16,6 +16,7 @@ Organized dotfiles for Arch Linux (Hyprland).
 - **MPV**: Video player
 - **Hyprshot**: Screenshot utility
 - **Split Monitor Workspaces**: Hyprland plugin for independent workspaces
+- **SDDM**: Login manager with Pixel-Coffee theme (Synced with daily wallpaper)
 
 ## Setup on a New PC
 
