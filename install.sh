@@ -23,6 +23,8 @@ dependencies=(
     "thunar"
     "yazi"
     "dunst"
+    "zsh"
+    "starship"
     "qimgv"
     "mpv"
     "hyprshot"

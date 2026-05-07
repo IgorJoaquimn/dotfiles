@@ -11,7 +11,8 @@ Organized dotfiles for Arch Linux (Hyprland).
 - **Neovim**: Text editor
 - **Thunar**: Graphical file manager
 - **Yazi**: Terminal file manager
-- **SwayNC**: Notification daemon and control center
+- **Dunst**: Notification daemon (Gruvbox theme)
+- **Zsh & Starship**: Modern shell and prompt
 - **qimgv**: Image viewer
 - **MPV**: Video player
 - **Hyprshot**: Screenshot utility
@@ -52,12 +53,13 @@ Example for Laptop:
 input {
     touchpad {
         natural_scroll = true
+        scroll_factor = 0.8
     }
 }
 ```
 
-### Bash
-If you need local aliases or environment variables, create `~/.bashrc_local` and it will be ignored by Git.
+### Shell
+If you need local aliases or environment variables, create `~/.bashrc_local` or `~/.zshrc_local` and they will be ignored by Git.
 
 ## Keybindings
 The modifier key is set to `SUPER` (Windows key).
