@@ -26,7 +26,6 @@ dependencies=(
     "zsh"
     "zsh-autosuggestions"
     "zsh-completions"
-    "zsh-syntax-highlighting"
     "starship"
     "qimgv"
     "mpv"
