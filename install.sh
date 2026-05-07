@@ -158,6 +158,19 @@ fi
 echo -e "${BLUE}Ensuring local configuration files exist...${NC}"
 touch "$HOME/.config/hypr/local.conf"
 touch "$HOME/.bashrc_local"
+touch "$HOME/.zshrc_local"
+
+# Link .zshrc and starship.toml to their expected locations
+echo -e "${BLUE}Performing additional symlinks for Zsh and Starship...${NC}"
+ln -sf "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
+mkdir -p "$HOME/.config"
+ln -sf "$DOTFILES_DIR/starship/starship.toml" "$HOME/.config/starship.toml"
+
+# Change default shell to zsh if not already
+if [ "$SHELL" != "$(which zsh)" ]; then
+    echo -e "${BLUE}Changing default shell to zsh...${NC}"
+    chsh -s "$(which zsh)"
+fi
 
 # Source the bash editor config in .bashrc if not already present
 BASHRC="$HOME/.bashrc"
