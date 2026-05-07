@@ -1,12 +1,3 @@
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
 # Set up Starship
 eval "$(starship init zsh)"
 
@@ -18,6 +9,16 @@ setopt appendhistory
 
 # Keybindings (Vim mode)
 bindkey -v
+
+# Zsh Plugins (Arch Linux paths)
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Note: zsh-completions is usually handled by adding to fpath
+fpath=(/usr/share/zsh/site-functions $fpath)
+
+# Initialize completion system
+autoload -Uz compinit
+compinit
 
 # Aliases
 alias ls='ls --color=auto'
