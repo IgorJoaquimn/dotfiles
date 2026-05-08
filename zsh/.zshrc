@@ -13,6 +13,13 @@ bindkey -v
 # Zsh Plugins (Arch Linux paths)
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Customize Syntax Highlighting
+ZSH_HIGHLIGHT_STYLES[unknown-token]='none'
+ZSH_HIGHLIGHT_STYLES[path]='none'
+ZSH_HIGHLIGHT_STYLES[path_prefix]='none'
+ZSH_HIGHLIGHT_STYLES[path_approx]='fg=yellow'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=green'
 # Note: zsh-completions is usually handled by adding to fpath
 fpath=(/usr/share/zsh/site-functions $fpath)
 
