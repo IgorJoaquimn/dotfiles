@@ -12,6 +12,7 @@ bindkey -v
 
 # Zsh Plugins (Arch Linux paths)
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Note: zsh-completions is usually handled by adding to fpath
 fpath=(/usr/share/zsh/site-functions $fpath)
 
