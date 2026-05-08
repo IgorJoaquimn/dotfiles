@@ -1,18 +1,15 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Main format (Left side)
-format = """
-[░▒▓](#a3aed2)\
-[  ](bg:#a3aed2 fg:#090c0c)\
-[](bg:#769ff0 fg:#a3aed2)\
-$directory\
-[](fg:#769ff0)\
-$fill\
-$character"""
+# Main format (Left side) - Only the prompt character
+format = """$fill$character """
 
-# Right side format
+# Right side format - All information modules
 right_format = """
-[](fg:#394260)\
+[](#a3aed2)\
+[  ](bg:#a3aed2 fg:#090c0c)\
+[](fg:#769ff0 bg:#a3aed2)\
+$directory\
+[](fg:#394260 bg:#769ff0)\
 $git_branch\
 $git_status\
 [](fg:#212736 bg:#394260)\
@@ -23,7 +20,7 @@ $golang\
 $php\
 [](fg:#1d2230 bg:#212736)\
 $time\
-[](fg:#1d2230 bg:#1d2230)"""
+[](fg:#1d2230)"""
 
 [fill]
 symbol = " "
