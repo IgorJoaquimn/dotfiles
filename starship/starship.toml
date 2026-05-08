@@ -1,23 +1,32 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# Main format (Left side)
 format = """
 [░▒▓](#a3aed2)\
 [  ](bg:#a3aed2 fg:#090c0c)\
 [](bg:#769ff0 fg:#a3aed2)\
 $directory\
-[](fg:#769ff0 bg:#394260)\
+[](fg:#769ff0)\
+$fill\
+$character"""
+
+# Right side format
+right_format = """
+[](fg:#394260)\
 $git_branch\
 $git_status\
-[](fg:#394260 bg:#212736)\
+[](fg:#212736 bg:#394260)\
 $nodejs\
 $bun\
 $rust\
 $golang\
 $php\
-[](fg:#212736 bg:#1d2230)\
+[](fg:#1d2230 bg:#212736)\
 $time\
-[ ](fg:#1d2230)\
-\n$character"""
+[](fg:#1d2230 bg:#1d2230)"""
+
+[fill]
+symbol = " "
 
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
@@ -70,3 +79,7 @@ disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#1d2230"
 format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
