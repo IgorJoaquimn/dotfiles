@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Main format (Left side) - Only the prompt character
-format = """$fill$character """
+format = "$character "
 
 # Right side format - All information modules
 right_format = """
@@ -21,9 +21,6 @@ $php\
 [](fg:#1d2230 bg:#212736)\
 $time\
 [](fg:#1d2230)"""
-
-[fill]
-symbol = " "
 
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
