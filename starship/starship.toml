@@ -3,7 +3,7 @@
 # Main format (Left side) - Only the prompt character
 format = "$character "
 
-# Right side format - All information modules (Inverted Gradient)
+# Right side format - End at git section
 right_format = """
 [](#212736)\
 $username\
@@ -12,13 +12,7 @@ $directory\
 [](fg:#769ff0 bg:#394260)\
 $git_branch\
 $git_status\
-[](fg:#a3aed2 bg:#769ff0)\
-$nodejs\
-$bun\
-$rust\
-$golang\
-$php\
-[ ](bg:#a3aed2)"""
+[ ](bg:#769ff0)"""
 
 [username]
 show_always = true
@@ -48,31 +42,6 @@ format = '[[ $symbol $branch ](fg:#e3e5e5 bg:#769ff0)]($style)'
 [git_status]
 style = "bg:#769ff0"
 format = '[[($all_status$ahead_behind )](fg:#e3e5e5 bg:#769ff0)]($style)'
-
-[nodejs]
-symbol = ""
-style = "bg:#a3aed2"
-format = '[[ $symbol ($version) ](fg:#090c0c bg:#a3aed2)]($style)'
-
-[bun]
-symbol = ""
-style = "bg:#a3aed2"
-format = '[[ $symbol ($version) ](fg:#090c0c bg:#a3aed2)]($style)'
-
-[rust]
-symbol = ""
-style = "bg:#a3aed2"
-format = '[[ $symbol ($version) ](fg:#090c0c bg:#a3aed2)]($style)'
-
-[golang]
-symbol = ""
-style = "bg:#a3aed2"
-format = '[[ $symbol ($version) ](fg:#090c0c bg:#a3aed2)]($style)'
-
-[php]
-symbol = ""
-style = "bg:#a3aed2"
-format = '[[ $symbol ($version) ](fg:#090c0c bg:#a3aed2)]($style)'
 
 [character]
 success_symbol = "[➜](bold green)"
