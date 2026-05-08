@@ -6,7 +6,7 @@ format = "$character "
 # Right side format - All information modules
 right_format = """
 [](#a3aed2)\
-[  ](bg:#a3aed2 fg:#090c0c)\
+$username\
 [](fg:#769ff0 bg:#a3aed2)\
 $directory\
 [](fg:#394260 bg:#769ff0)\
@@ -21,6 +21,12 @@ $php\
 [](fg:#1d2230 bg:#212736)\
 $time\
 [](fg:#1d2230)"""
+
+[username]
+show_always = true
+style_user = "bg:#a3aed2 fg:#090c0c"
+style_root = "bg:#a3aed2 fg:#090c0c"
+format = '[ $user ]($style)'
 
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
