@@ -28,6 +28,7 @@ dependencies=(
     "zsh-completions"
     "zsh-syntax-highlighting"
     "starship"
+    "fzf"
     "qimgv"
     "mpv"
     "hyprshot"
