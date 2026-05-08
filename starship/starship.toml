@@ -18,7 +18,7 @@ $bun\
 $rust\
 $golang\
 $php\
-[](fg:#212736)"""
+[ ](bg:#212736)"""
 
 [username]
 show_always = true
