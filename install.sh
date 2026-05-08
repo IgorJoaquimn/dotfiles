@@ -26,6 +26,7 @@ dependencies=(
     "zsh"
     "starship"
     "fzf"
+    "zoxide"
     "qimgv"
     "mpv"
     "hyprshot"

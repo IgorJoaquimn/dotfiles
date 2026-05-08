@@ -12,7 +12,7 @@ Organized dotfiles for Arch Linux (Hyprland).
 - **Thunar**: Graphical file manager
 - **Yazi**: Terminal file manager
 - **Dunst**: Notification daemon (Gruvbox theme)
-- **Zsh & Starship**: Modern shell with Zinit (Plugins: fzf-tab, autosuggestions, snippets for git/sudo/arch)
+- **Zsh & Starship**: Modern shell with Zinit (Plugins: fzf-tab, autosuggestions, snippets for git/sudo/arch), FZF, and Zoxide (better cd)
 - **qimgv**: Image viewer
 - **MPV**: Video player
 - **Hyprshot**: Screenshot utility

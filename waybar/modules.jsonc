@@ -110,11 +110,11 @@
         "format-ethernet": "",
         "tooltip-format": "{essid}\n\nFrequency: {frequency}GHz\nStrength: {signalStrength}%\n\n{bandwidthUpBytes}   {bandwidthDownBytes}",
         "menu": "on-click-right",
-        "menu-file": "~/.config/waybar/context/network.xml",
+        "menu-file": "/home/igo/.config/waybar/context/network.xml",
         "menu-actions": {
   			"action-1": "nmcli radio wifi off",
   			"action-2": "nmcli radio wifi on",
-            "action-3": "hyprctl dispatch exec '[float] alacritty -e nmtui'",
+            "action-3": "hyprctl dispatch exec '[float] kitty -e nmtui'",
             "action-4": "hyprctl dispatch exec nm-connection-editor"
   		}
     },
@@ -196,7 +196,7 @@
         "tooltip" : false,
         "format" : "",
         "menu": "on-click",
-        "menu-file": "~/.config/waybar/context/ctlcenter.xml",
+        "menu-file": "/home/igo/.config/waybar/context/ctlcenter.xml",
         "menu-actions": {
             "action-1-1": "hyprctl dispatch exec '[float] kitty -e htop'",
             "action-1-2": "hyprctl dispatch exec 'kitty -e btop'",
