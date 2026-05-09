@@ -137,7 +137,7 @@
         "interval": 20,
         "full-at": 100,
         "tooltip": true,
-        "format-full": "",
+        "format-full": "{icon} {capacity}%",
         "format": "{icon} {capacity}%",
         "format-time": "{H}:{M:02}",
         "format-charging": " {capacity}% ({time})",
