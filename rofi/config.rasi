@@ -13,4 +13,4 @@ configuration {
     sidebar-mode: true;
 }
 
-@theme "themes/gruvbox.rasi"
+@theme "themes/tokyonight.rasi"

@@ -68,8 +68,8 @@
     "pulseaudio": {
         "format": "{icon}",
         "format-bluetooth": "{icon}",
-        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-click-right": "hyprctl dispatch exec 'pavucontrol -t 4'",
+        "on-click": "hyprctl dispatch exec 'pavucontrol -t 4'",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "tooltip-format": "{volume}%",
         "format-muted": "<span size='12pt'>󰝟</span>",
         "scroll-step": 2,
@@ -109,7 +109,7 @@
         "format-wifi": "",
         "format-ethernet": "",
         "tooltip-format": "{essid}\n\nFrequency: {frequency}GHz\nStrength: {signalStrength}%\n\n{bandwidthUpBytes}   {bandwidthDownBytes}",
-        "menu": "on-click-right",
+        "menu": "on-click",
         "menu-file": "/home/igo/.config/waybar/context/network.xml",
         "menu-actions": {
   			"action-1": "nmcli radio wifi off",
@@ -129,8 +129,8 @@
         "tooltip-format": "{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}   {device_battery_percentage}%",
-        "on-click": "~/.local/bin/toggle_bluetooth &",
-        "on-click-right": "hyprctl dispatch exec blueman-manager"
+        "on-click": "hyprctl dispatch exec blueman-manager",
+        "on-click-right": "~/.local/bin/toggle_bluetooth &"
     },
 
     "battery": {

@@ -1,0 +1,75 @@
+/**
+ * Tokyo Night theme for Rofi
+ */
+
+* {
+    bg0: #1a1b26;
+    bg1: #24283b;
+    bg2: #414868;
+    fg:  #c0caf5;
+    accent: #7aa2f7;
+    urgent: #f7768e;
+
+    background-color: transparent;
+    text-color: @fg;
+    font: "Fira Mono 12";
+}
+
+window {
+    background-color: @bg0;
+    border: 2px;
+    border-color: @accent;
+    border-radius: 10px;
+    width: 600px;
+    padding: 20px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 15px;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @bg1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+prompt {
+    background-color: @accent;
+    text-color: @bg0;
+    padding: 0 10px;
+    border-radius: 3px;
+}
+
+entry {
+    placeholder: "Search...";
+    placeholder-color: @bg2;
+    padding: 0 10px;
+}
+
+listview {
+    lines: 10;
+    columns: 1;
+    fixed-height: false;
+}
+
+element {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg0;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0 10px 0 0;
+}
+
+element-text {
+    vertical-align: 0.5;
+}

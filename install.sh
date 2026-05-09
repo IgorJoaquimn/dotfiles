@@ -27,8 +27,6 @@ dependencies=(
     "starship"
     "fzf"
     "zoxide"
-    "qimgv"
-    "mpv"
     "hyprshot"
     "jq"
     "wget"
@@ -37,6 +35,12 @@ dependencies=(
     "pkgconf"
     "meson"
     "ninja"
+    "blueman"
+    "pavucontrol"
+    "nm-connection-editor"
+    "network-manager-applet"
+    "nwg-look"
+    "papirus-icon-theme"
 )
 
 # Function to check and install dependencies
@@ -57,6 +61,9 @@ install_dependencies() {
             yay -S --noconfirm "$pkg"
         fi
     done
+
+    echo -e "${BLUE}Cleaning up unused packages...${NC}"
+    yay -Yc --noconfirm
 }
 
 # Run dependency installation
@@ -67,7 +74,7 @@ DOTFILES_DIR="$HOME/dotfiles"
 CONFIG_DIR="$HOME/.config"
 
 # List of apps/folders to link
-apps=("hypr" "kitty" "waybar" "rofi" "btop" "nvim" "dunst" "yazi" "mpv" "qimgv" "bash")
+apps=("hypr" "kitty" "waybar" "rofi" "btop" "nvim" "dunst" "yazi" "bash")
 
 # Create .config if it doesn't exist
 mkdir -p "$CONFIG_DIR"
@@ -187,6 +194,15 @@ if [ -f "$BASHRC" ]; then
         echo "$SOURCE_LINE" >> "$BASHRC"
         echo -e "${GREEN}Added to .bashrc${NC}"
     fi
+fi
+
+# Set dark theme preference
+if command -v gsettings &> /dev/null; then
+    echo -e "${BLUE}Applying Tokyo Night GTK and Icon theme...${NC}"
+    gsettings set org.gnome.desktop.interface gtk-theme "Tokyonight-Dark"
+    gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+    gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
+    echo -e "${GREEN}System theme set to Tokyo Night${NC}"
 fi
 
 echo -e "${GREEN}Installation complete! Please restart Hyprland to apply all changes.${NC}"
