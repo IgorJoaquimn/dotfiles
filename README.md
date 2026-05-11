@@ -15,6 +15,7 @@ Organized dotfiles for Arch Linux (Hyprland).
 - **Zsh & Starship**: Modern shell with Zinit (Plugins: fzf-tab, autosuggestions, snippets for git/sudo/arch), FZF, and Zoxide (better cd)
 - **qimgv**: Image viewer
 - **MPV**: Video player
+- **Zathura**: PDF viewer
 - **Hyprshot**: Screenshot utility
 - **Split Monitor Workspaces**: Hyprland plugin for independent workspaces
 - **SDDM**: Login manager with Pixel-Coffee theme (Synced with daily wallpaper)
