@@ -1,0 +1,9 @@
+[[manager.prepend_keymap]]
+on   = [ "T" ]
+run  = 'shell "$SHELL" --block'
+desc = "Open shell in current directory"
+
+[[manager.prepend_keymap]]
+on   = [ "C-t" ]
+run  = 'shell "hyprctl dispatch exec \"kitty --directory $PWD\"" --confirm'
+desc = "Open new Kitty window in current directory"
