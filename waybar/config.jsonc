@@ -7,7 +7,6 @@
         "orientation": "horizontal",
         "modules" : [
             "hyprland/workspaces",
-            "hyprland/window",
             "mpris"
         ]
     },
