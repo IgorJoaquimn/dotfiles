@@ -103,14 +103,14 @@
 
     "network": {
         "interval": 10,
-        "format-disabled": "",
-        "format-disconnected": "",
-        "format-linked": "",
-        "format-wifi": "",
-        "format-ethernet": "",
+        "format-disabled": "󰤮",
+        "format-disconnected": "󰤮",
+        "format-linked": "󰖩",
+        "format-wifi": "󰖩",
+        "format-ethernet": "󰈀",
         "tooltip-format": "{essid}\n\nFrequency: {frequency}GHz\nStrength: {signalStrength}%\n\n{bandwidthUpBytes}   {bandwidthDownBytes}",
         "menu": "on-click",
-        "menu-file": "/home/igo/.config/waybar/context/network.xml",
+        "menu-file": "$HOME/.config/waybar/context/network.xml",
         "menu-actions": {
   			"action-1": "nmcli radio wifi off",
   			"action-2": "nmcli radio wifi on",
@@ -120,17 +120,17 @@
     },
 
     "bluetooth": {
-        "format": "{}",
-        "format-on": "󰂰",
+        "format": "󰂯",
+        "format-on": "󰂯",
         "format-off": "󰂲",
         "format-disabled": "󰂲",
-        "format-connected": "{device_alias}",
-        "format-connected-battery": "{device_alias}",
+        "format-connected": "󰂯",
+        "format-connected-battery": "󰂯",
         "tooltip-format": "{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}   {device_battery_percentage}%",
         "on-click": "hyprctl dispatch exec blueman-manager",
-        "on-click-right": "~/.local/bin/toggle_bluetooth &"
+        "on-click-right": "bluetoothctl show | grep -q 'Powered: yes' && bluetoothctl power off || bluetoothctl power on"
     },
 
     "battery": {
@@ -196,7 +196,7 @@
         "tooltip" : false,
         "format" : "",
         "menu": "on-click",
-        "menu-file": "/home/igo/.config/waybar/context/ctlcenter.xml",
+        "menu-file": "$HOME/.config/waybar/context/ctlcenter.xml",
         "menu-actions": {
             "action-1-1": "hyprctl dispatch exec '[float] kitty -e htop'",
             "action-1-2": "hyprctl dispatch exec 'kitty -e btop'",
