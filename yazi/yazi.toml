@@ -15,7 +15,7 @@ browser = [
 	{ run = 'google-chrome-stable --new-window "$@"', orphan = true, desc = "Open in New Window", for = "unix" },
 ]
 jupyter = [
-	{ run = 'euporie-notebook "$@"', block = true, desc = "euporie", for = "unix" },
+	{ run = '$HOME/.local/bin/euporie-notebook "$@"', block = true, desc = "euporie", for = "unix" },
 ]
 
 [open]
@@ -31,7 +31,7 @@ rules = [
 
 [preview]
 rules = [
-	{ url = "*.ipynb", run = 'euporie-preview --width "$YAZI_WIDTH" "$@" ' },
+	{ url = "*.ipynb", run = '$HOME/.local/bin/euporie-preview --width "$YAZI_WIDTH" "$@" ' },
 	{ mime = "{image,audio,video}/*", run = "builtin" },
 	{ mime = "application/json", run = "builtin" },
 	{ mime = "*", run = "builtin" },

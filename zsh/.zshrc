@@ -1,6 +1,9 @@
 # Set up Starship
 eval "$(starship init zsh)"
 
+# Path configuration
+export PATH="$HOME/.local/bin:$PATH"
+
 # Zinit Installation
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 if [ ! -d "$ZINIT_HOME" ]; then
