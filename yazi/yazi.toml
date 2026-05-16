@@ -14,9 +14,13 @@ pdf = [
 browser = [
 	{ run = 'google-chrome-stable --new-window "$@"', orphan = true, desc = "Open in New Window", for = "unix" },
 ]
+jupyter = [
+	{ run = 'euporie-notebook "$@"', block = true, desc = "euporie", for = "unix" },
+]
 
 [open]
 rules = [
+	{ name = "*.ipynb", use = "jupyter" },
 	{ mime = "text/html", use = "browser" },
 	{ mime = "text/*", use = "edit" },
 	{ mime = "application/json", use = "edit" },
@@ -27,6 +31,7 @@ rules = [
 
 [preview]
 rules = [
+	{ name = "*.ipynb", run = 'euporie-preview --width "$YAZI_WIDTH" "$@" ' },
 	{ mime = "{image,audio,video}/*", run = "builtin" },
 	{ mime = "application/json", run = "builtin" },
 	{ mime = "*", run = "builtin" },

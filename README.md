@@ -10,9 +10,11 @@ Organized dotfiles for Arch Linux (Hyprland).
 - **Btop**: Resource monitor
 - **Neovim**: Text editor
 - **Thunar**: Graphical file manager
-- **Yazi**: Terminal file manager
-- **Dunst**: Notification daemon (Gruvbox theme)
+- **Yazi**: Terminal file manager (Enhanced with image previews and browser integration)
+- **Euporie**: Terminal Jupyter Notebook viewer and editor
+- **Dunst**: Notification daemon (Tokyo Night theme)
 - **Zsh & Starship**: Modern shell with Zinit (Plugins: fzf-tab, autosuggestions, snippets for git/sudo/arch), FZF, and Zoxide (better cd)
+- **Tokyo Night**: System-wide theme (Moon variant for GTK, Light variant for Icons)
 - **qimgv**: Image viewer
 - **MPV**: Video player
 - **Zathura**: PDF viewer
@@ -88,6 +90,9 @@ The modifier key is set to `SUPER` (Windows key).
 | `SUPER + Scroll` | Cycle Workspaces |
 | `SUPER + LMB/RMB` | Move/Resize Window |
 
-## Daily Wallpapers
-The system automatically fetches a "Classical Art" wallpaper from Wallhaven every day and on every login. 
+## Key Features
+- **Consolidated Waybar**: All-in-one status bar with workspaces, music, and system info.
+- **Jupyter in Terminal**: View and edit `.ipynb` files directly in Yazi using **Euporie**.
+- **Enhanced Yazi**: Optimized openers for HTML (new window), images, and videos with orphan process support.
+- **Daily Wallpapers**: The system automatically fetches a "Classical Art" wallpaper from Wallhaven every day and on every login. 
 - Manual reload: `reload_wallpaper.sh`

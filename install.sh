@@ -45,6 +45,8 @@ dependencies=(
     "network-manager-applet"
     "nwg-look"
     "papirus-icon-theme"
+    "tokyonight-gtk-theme-git"
+    "euporie"
 )
 
 # Function to check and install dependencies
@@ -203,10 +205,10 @@ fi
 # Set dark theme preference
 if command -v gsettings &> /dev/null; then
     echo -e "${BLUE}Applying Tokyo Night GTK and Icon theme...${NC}"
-    gsettings set org.gnome.desktop.interface gtk-theme "Tokyonight-Dark"
-    gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+    gsettings set org.gnome.desktop.interface gtk-theme "Tokyonight-Moon"
+    gsettings set org.gnome.desktop.interface icon-theme "Tokyonight-Light"
     gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
-    echo -e "${GREEN}System theme set to Tokyo Night${NC}"
+    echo -e "${GREEN}System theme set to Tokyo Night (Moon/Light Icons)${NC}"
 fi
 
 echo -e "${GREEN}Installation complete! Please restart Hyprland to apply all changes.${NC}"
