@@ -3,19 +3,19 @@ edit = [
 	{ run = 'nvim "$@"', block = true, for = "unix" },
 ]
 image = [
-	{ run = 'qimgv "$@"', desc = "qimgv", for = "unix" },
+	{ run = 'qimgv "$@"', orphan = true, desc = "qimgv", for = "unix" },
 ]
 video = [
-	{ run = 'mpv "$@"', desc = "mpv", for = "unix" },
+	{ run = 'mpv "$@"', orphan = true, desc = "mpv", for = "unix" },
 ]
 pdf = [
-	{ run = 'zathura "$@"', desc = "zathura", for = "unix" },
+	{ run = 'zathura "$@"', orphan = true, desc = "zathura", for = "unix" },
 ]
 browser = [
-	{ run = 'google-chrome-stable --new-window "$@"', desc = "Open in New Window", for = "unix" },
+	{ run = 'google-chrome-stable --new-window "$@"', orphan = true, desc = "Open in New Window", for = "unix" },
 ]
 nbpreview = [
-	{ run = 'nbpreview --images --paging "$@"', desc = "nbpreview", for = "unix" },
+	{ run = 'nbpreview --images --paging "$@"', block = true, desc = "nbpreview", for = "unix" },
 ]
 
 [open]
