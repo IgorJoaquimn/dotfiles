@@ -12,7 +12,7 @@ pdf = [
 	{ run = 'zathura "$@"', desc = "zathura", for = "unix" },
 ]
 browser = [
-	{ run = 'xdg-open "$@"', desc = "Open in Browser", for = "unix" },
+	{ run = 'google-chrome-stable --new-window "$@"', desc = "Open in New Window", for = "unix" },
 ]
 nbpreview = [
 	{ run = 'nbpreview --images --paging "$@"', desc = "nbpreview", for = "unix" },
@@ -20,7 +20,7 @@ nbpreview = [
 
 [open]
 rules = [
-	{ name = "*.ipynb", mime = "application/x-ipynb+json", use = "nbpreview" },
+	{ name = "*.ipynb", mime = "*", use = "nbpreview" },
 	{ mime = "text/html", use = "browser" },
 	{ mime = "text/*", use = "edit" },
 	{ mime = "application/json", use = "edit" },
